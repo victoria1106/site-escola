@@ -32,15 +32,12 @@ header nav a:hover {
     text-decoration: underline;
 }
 
-/* Hero */
 /* ---------------------- Hero Banner ---------------------- */
-
-/* Hero em meia tela */
 .hero {
-    width: 100%;                   /* ocupa 100% da largura */
-    height: 60vh;                  /* ocupa metade da altura da tela */
-    background: url("assets/3992217.webp") no-repeat center center/cover;
-    background-size: cover;
+    width: 100%;                   
+    height: 70vh;                 /* altura do banner */
+    background: url("assets/3992217.webp") no-repeat center center;
+    background-size: cover;        
     background-position: center;
     display: flex;
     align-items: center;
@@ -48,6 +45,9 @@ header nav a:hover {
     text-align: center;
     color: white;
     position: relative;
+    max-width: 100% !important;    
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* Overlay escuro transparente */
@@ -58,7 +58,7 @@ header nav a:hover {
     left: 0; 
     right: 0; 
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* mais alto = mais escuro */
+    background: rgba(0, 0, 0, 0.4);
 }
 
 /* Conteúdo acima da imagem */
@@ -84,31 +84,6 @@ header nav a:hover {
 }
 
 /* Seções normais */
-section {
-    padding: 80px 20px;
-    max-width: 1000px;
-    margin: auto;
-    margin-bottom: 60px;
-}
-
-
-/* Botão Hero */
-.hero a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: #001f3f;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background 0.3s;
-}
-
-.hero a:hover {
-    background: #003366;
-}
-
-/* Seções */
 section {
     padding: 80px 20px;
     max-width: 1000px;
@@ -156,23 +131,26 @@ section {
 
 .contact-boxes {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 25px;
     margin-top: 30px;
 }
 
 .contact-box {
+    display: block;              /* link ocupa toda a área */
+    text-decoration: none;       /* remove sublinhado */
+    color: inherit;              /* mantém cor do texto normal */
     background: white;
     border-radius: 15px;
     padding: 25px;
-    width: 280px;
+    width: 100%;          
+    max-width: 1000px;    /* alinhado com o mapa */
+    margin: auto;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-box:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
@@ -188,6 +166,8 @@ section {
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 1000px;         /* alinhado com o retângulo */
+    margin: 40px auto 0 auto;  /* centralizado */
 }
 
 .map-container:hover {
